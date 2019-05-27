@@ -15,6 +15,17 @@ reUSdate = re.compile(r"""^(.*?)            # All text before date
 curDir = os.getcwd()
 files = os.listdir()
 
+for amerFileName in os.listdir('.'):
+    mo = reUSdate.search(amerFileName)
+
+    # skip files w/o date in name
+    if mo == None:
+        continue
+
+    # store parts of filename:
+    beforePart, monthPart, _, dayPart, _, yearPart, _, afterPart, *rest = mo.groups()
+
+
 usDateFiles = []
 for file in files:
     if reUSdate.match(file):
@@ -23,6 +34,8 @@ for file in files:
 # rename file to have Euro-style date
 for file in usDateFiles:
     reResult = reUSdate.search(file)
-    print(reResult)
+
+
 # use shutil.move() to rename file
+
 
