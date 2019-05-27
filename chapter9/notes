@@ -1,0 +1,4 @@
+shutils | shell utils for file manipulation and other shell interaction
+os.walk | walks all files and directories under a given directory
+send2trash | safe deletes. Sends files to OS trash directory rather than unlinking
+zipfile | file compression and extraction
