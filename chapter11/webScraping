@@ -1,0 +1,6 @@
+Modules:
+	webbrowser - python builtin
+	requests   - downloads files and pages
+	beautiful soup - parses html
+	selenium   - launches and controls a web browser.
+		     can simulate clicks and fill in forms
